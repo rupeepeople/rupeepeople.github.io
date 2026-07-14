@@ -1,213 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic meta -->
-  <meta charset="utf-8">
-  <title>RupeePeople – Smart Financial Asset Discovery & Recovery</title>
-  <meta name="description" content="RupeePeople helps individuals and businesses discover, track and recover forgotten or lost financial assets in India using secure, AI-assisted workflows.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Open Graph / social -->
-  <meta property="og:title" content="RupeePeople – Smart Financial Asset Discovery & Recovery">
-  <meta property="og:description" content="Discover and recover your financial assets with a secure, tech-first platform built in India.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rupeepeople.github.io/">
-  <meta property="og:image" content="https://rupeepeople.github.io/og-preview.png">
-
-  <!-- Twitter cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RupeePeople – Smart Financial Asset Discovery & Recovery">
-  <meta name="twitter:description" content="Tech-first asset discovery & recovery for India.">
-
-  <!-- Robots / SEO basics -->
-  <meta name="robots" content="index,follow">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://rupeepeople.github.io/">
-
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- JSON-LD schema for AI/search -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "RupeePeople",
-    "alternateName": "Rupee People",
-    "url": "https://rupeepeople.github.io/",
-    "logo": "https://rupeepeople.github.io/og-preview.png",
-    "sameAs": [
-      "https://www.linkedin.com/in/YOUR-LINKEDIN-SLUG",
-      "https://github.com/rupeepeople"
-    ],
-    "foundingDate": "2024-01-01",
-    "founder": {
-      "@type": "Person",
-      "name": "Priyavardhini G",
-      "jobTitle": "Founder & CEO"
-    },
-    "description": "RupeePeople is a fintech platform focused on financial asset discovery and recovery services for individuals and businesses in India.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN",
-      "addressRegion": "Tamil Nadu",
-      "addressLocality": "Chennai"
-    }
-  }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RupeePeople — After Life Asset Discovery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <span class="logo-circle">₹</span>
-        <div class="brand-text">
-          <h1>RupeePeople</h1>
-          <p class="tagline">Discover. Track. Recover.</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="#why">Why</a>
-        <a href="#features">Features</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+  <!-- HEADER -->
+  <header class="rp-header">
+    <div class="rp-logo-wrap">
+      <img src="Logo with wording.jpeg" alt="RupeePeople logo with wording" class="rp-logo rp-logo-animate" />
+      <span class="rp-tagline">When you think about money</span>
     </div>
+
+    <nav class="rp-nav">
+      <a href="#hero">Home</a>
+      <a href="#afterlife">After‑Life Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="rp-dark-toggle" id="darkToggle">☾</button>
   </header>
 
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-copy">
-          <h2 id="hero-title">Turn forgotten assets into found money.</h2>
-          <p>
-            RupeePeople helps you discover and recover financial assets across banks,
-            brokers and registrars with a secure, AI-assisted process designed for India.
-          </p>
-          <div class="hero-actions">
-            <button id="notifyButton" class="btn-primary">
-              Get early access
-            </button>
-            <p class="hero-subtext">
-              No spam. We’ll only email when the beta is ready.
-            </p>
-          </div>
-        </div>
-        <div class="hero-card" aria-label="RupeePeople in one glance">
-          <ul>
-            <li><strong>Coverage:</strong> Deposits, mutual funds, demat, insurance, and more.</li>
-            <li><strong>Security-first:</strong> Bank-grade encryption & secure workflows.</li>
-            <li><strong>For India:</strong> Built for Indian regulations, KYC and asset systems.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- HERO -->
+  <section class="rp-hero" id="hero">
+    <div class="rp-hero-inner">
+      <h1>After Life Asset Discovery</h1>
+      <p>We help families discover and recover hidden financial assets with clarity, dignity and complete documentation.</p>
 
-    <section id="why" class="section">
-      <div class="container">
-        <h2>Why RupeePeople?</h2>
-        <p>
-          In India, crores of rupees sit unclaimed in dormant accounts, forgotten investments
-          and legacy assets. RupeePeople makes it easier to find and claim what’s already yours.
-        </p>
-        <div class="grid">
-          <article class="card">
-            <h3>Unified discovery</h3>
-            <p>
-              Bring signals from banks, registrars, mutual fund houses and exchanges into one
-              unified view of potential assets linked to you or your family.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Guided recovery</h3>
-            <p>
-              Follow step-by-step, compliance-aligned workflows to complete KYC, documentation
-              and follow-ups required to recover assets.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Built for trust</h3>
-            <p>
-              Clear consent, transparent fees and minimal friction, so you stay in control of
-              your data and outcomes at every step.
-            </p>
-          </article>
-        </div>
+      <div class="rp-hero-cta">
+        <a href="#afterlife" class="rp-btn-primary">Learn More</a>
+        <a href="https://wa.me/918056221285" class="rp-btn-ghost">Start on WhatsApp</a>
       </div>
-    </section>
-
-    <section id="features" class="section section-alt">
-      <div class="container">
-        <h2>Core capabilities</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Intelligent asset matching</h3>
-            <p>
-              Use names, addresses, PAN and other signals to surface probable asset matches
-              without exposing raw data to third parties.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Compliance-aware workflows</h3>
-            <p>
-              Pre-built checklists for typical recovery journeys: dormant bank accounts,
-              unclaimed dividends, mutual funds, demat holdings and more.
-            </p>
-          </article>
-          <article class="card">
-            <h3>API-ready design</h3>
-            <p>
-              Designed from day one for secure APIs, partner integrations and automation,
-              so institutions can plug in with minimal friction.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="workflow" class="section">
-      <div class="container">
-        <h2>How the workflow could look</h2>
-        <ol class="steps">
-          <li><strong>Secure onboarding.</strong> Verify identity with KYC-friendly inputs.</li>
-          <li><strong>Signal ingestion.</strong> Aggregate leads from banks, RTAs, and exchanges.</li>
-          <li><strong>AI-assisted triage.</strong> Rank, deduplicate and validate asset candidates.</li>
-          <li><strong>Guided recovery.</strong> Generate document lists, track submissions and status.</li>
-          <li><strong>Outcome tracking.</strong> Track recovered amounts and open actions.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt">
-      <div class="container">
-        <h2>Stay in the loop</h2>
-        <p>
-          Building something in this space or want to be an early user?
-          Drop your email and we’ll reach out when we open up the beta.
-        </p>
-        <form id="notifyForm" class="contact-form" aria-label="Notify me form">
-          <label for="emailInput">Email address</label>
-          <input id="emailInput" name="email" type="email" placeholder="you@example.com" required>
-          <button type="submit" class="btn-primary">Notify me</button>
-          <p id="formMessage" class="form-message" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> RupeePeople. Built on GitHub Pages.</p>
-      <p class="footer-meta">
-        Made in India · Chennai / Dublin · Fintech asset discovery & recovery.
-      </p>
     </div>
+  </section>
+
+  <!-- AFTER-LIFE SERVICE -->
+  <section class="rp-section rp-glass" id="afterlife">
+    <h2>After Life Asset Discovery Service</h2>
+    <p>
+      When a loved one passes on, families often struggle to identify where money and records are kept.
+      Banks remain guarded, government portals feel confusing, and important documents are often scattered.
+    </p>
+
+    <p><strong>RupeePeople brings structure, care and clarity to the entire process:</strong></p>
+
+    <div class="rp-grid">
+      <article class="rp-card rp-glass">
+        <h3>Bank Accounts</h3>
+        <p>Dormant & active accounts, FDs, RDs.</p>
+      </article>
+
+      <article class="rp-card rp-glass">
+        <h3>Mutual Funds</h3>
+        <p>CAMS & KFintech folio discovery.</p>
+      </article>
+
+      <article class="rp-card rp-glass">
+        <h3>Shares & Demat</h3>
+        <p>NSDL & CDSL CAS analysis.</p>
+      </article>
+
+      <article class="rp-card rp-glass">
+        <h3>IEPF</h3>
+        <p>Unclaimed shares & dividends.</p>
+      </article>
+
+      <article class="rp-card rp-glass">
+        <h3>Insurance</h3>
+        <p>Life, health, accident, employer policies.</p>
+      </article>
+
+      <article class="rp-card rp-glass">
+        <h3>PF / Pension</h3>
+        <p>EPFO, employer dues, gratuity.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="rp-section rp-contact" id="contact">
+    <h2>Contact RupeePeople</h2>
+    <p>Reach us for After Life asset discovery and case onboarding.</p>
+
+    <div class="rp-contact-grid">
+      <a href="mailto:rupeepeople@gmail.com" class="rp-contact-item">📧 rupeepeople@gmail.com</a>
+      <a href="tel:+918056221285" class="rp-contact-item">📞 +91 80562 21285</a>
+      <a href="https://wa.me/918056221285" class="rp-contact-item">💬 WhatsApp: +91 80562 21285</a>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <button class="rp-whatsapp-fab" onclick="window.location.href='https://wa.me/918056221285'">
+    💬
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="rp-footer">
+    <span>© 2026 RupeePeople — All Rights Reserved.</span>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
