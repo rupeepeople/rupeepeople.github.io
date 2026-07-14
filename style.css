@@ -1,39 +1,41 @@
 :root {
-  --bg: #f4f6f8;
+  --bg: #f5f5f0;
   --bg-2: #ffffff;
-  --text: #111111;
+  --text: #0f172a;
   --muted: #5f6368;
   --accent: #0f9d69;
   --accent-2: #16a6b8;
-  --border: rgba(17, 17, 17, 0.08);
-  --shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --hero-shift: 0px;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #f8fafb 0%, #f3f5f7 100%);
+  background: var(--bg);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+h1, h2, h3, .rp-nav a, .rp-tagline, .rp-btn-primary, .rp-btn-ghost {
+  font-family: "SF Pro Display", "Segoe UI", sans-serif;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(15, 157, 105, 0.12), transparent 34%),
-              radial-gradient(circle at 85% 20%, rgba(22, 166, 184, 0.12), transparent 28%);
+  background: radial-gradient(circle at top left, rgba(15, 157, 105, 0.10), transparent 32%),
+              radial-gradient(circle at 85% 20%, rgba(22, 166, 184, 0.10), transparent 30%);
   pointer-events: none;
   z-index: -1;
-  animation: floatGlow 10s ease-in-out infinite alternate;
-}
-
-@keyframes floatGlow {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(10px, -10px, 0) scale(1.05); }
 }
 
 a { color: inherit; text-decoration: none; }
@@ -47,9 +49,12 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  background: rgba(255,255,255,0.82);
+  margin: 16px 20px 0;
+  background: rgba(255,255,255,0.5);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   animation: fadeDown 700ms ease both;
 }
 
@@ -106,19 +111,48 @@ img { max-width: 100%; display: block; }
 }
 
 .rp-hero {
-  padding: 5.5rem 1.5rem 4rem;
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.5rem 1.25rem 3rem;
+  overflow: hidden;
+}
+
+.rp-hero::before,
+.rp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: transform 220ms ease-out;
+}
+
+.rp-hero::before {
+  background: radial-gradient(circle at 20% 20%, rgba(15, 157, 105, 0.16), transparent 32%),
+              radial-gradient(circle at 80% 20%, rgba(22, 166, 184, 0.16), transparent 34%);
+  transform: translate3d(0, calc(var(--hero-shift) * -1), 0);
+}
+
+.rp-hero::after {
+  background: linear-gradient(120deg, rgba(255,255,255,0.24), transparent 60%);
+  transform: translate3d(0, calc(var(--hero-shift) * 0.35), 0);
 }
 
 .rp-hero-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #ffffff 0%, #f6fbf8 100%);
-  border: 1px solid var(--border);
-  border-radius: 40px;
-  box-shadow: 0 30px 70px rgba(16, 24, 40, 0.12);
-  padding: 3.8rem 2.2rem;
   position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 3.3rem 1.6rem;
   overflow: hidden;
+  backdrop-filter: blur(20px);
   animation: heroReveal 900ms ease both;
 }
 
@@ -150,17 +184,37 @@ img { max-width: 100%; display: block; }
 }
 
 .rp-hero h1 {
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 4.3vw, 3.6rem);
+  margin: 0 auto 1rem;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  max-width: 760px;
+  animation: heroTextIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .rp-hero p {
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   color: var(--muted);
-  max-width: 700px;
-  margin: 0 0 1.6rem;
+  max-width: 720px;
+  margin: 0 auto 1.6rem;
+  opacity: 0.9;
+  animation: heroTextIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) 140ms both;
+}
+
+.rp-hero-cta {
+  animation: heroTextIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) 280ms both;
+}
+
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .rp-hero-cta {
@@ -178,6 +232,10 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
   font-weight: 600;
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.rp-hero-cta {
+  justify-content: center;
 }
 
 .rp-btn-primary {
@@ -212,16 +270,17 @@ img { max-width: 100%; display: block; }
 }
 
 .rp-section {
-  max-width: 1120px;
+  max-width: 1100px;
   margin: 0 auto 1.5rem;
-  padding: 2.2rem 1.5rem;
+  padding: 1.2rem 1.25rem 2rem;
 }
 
 .rp-glass {
-  background: rgba(255,255,255,0.78);
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  box-shadow: 0 20px 50px rgba(16, 24, 40, 0.08);
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(15px);
 }
 
 .rp-section h2 {
@@ -243,7 +302,8 @@ img { max-width: 100%; display: block; }
 }
 
 .rp-card {
-  padding: 1.1rem 1.1rem 1.2rem;
+  padding: 1.15rem 1.15rem 1.2rem;
+  border-radius: 20px;
 }
 
 .rp-card h3 {
@@ -269,11 +329,12 @@ img { max-width: 100%; display: block; }
 
 .rp-contact-item {
   padding: 1rem 1.1rem;
-  background: #fff;
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.45);
   border-radius: 18px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
   font-weight: 600;
+  backdrop-filter: blur(10px);
 }
 
 .rp-whatsapp-fab {
