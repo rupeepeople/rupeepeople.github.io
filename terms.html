@@ -8,28 +8,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="rp-header" id="siteHeader">
-    <a href="index.html" class="rp-logo-brand">
-      <span class="rp-logo-pedestal rp-logo-pedestal-header">
-        <img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-logo-header" width="180" height="48" />
-      </span>
-      <span class="rp-logo-brand-text">
-        <span class="rp-tagline">When you think about money</span>
-      </span>
-    </a>
-    <nav class="rp-nav" id="siteNav" aria-label="Main navigation">
+  <header class="rp-header">
+    <div class="rp-logo-wrap">
+      <a href="index.html"><img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo" /></a>
+    </div>
+    <nav class="rp-nav">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy</a>
     </nav>
-    <div class="rp-header-actions">
-      <button class="rp-nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-      <button class="rp-dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode">☾</button>
-    </div>
+    <button class="rp-dark-toggle" id="darkToggle" aria-label="Toggle dark mode">☾</button>
   </header>
 
   <main class="rp-legal">
@@ -92,18 +83,8 @@
   </main>
 
   <footer class="rp-footer">
-    <div class="rp-footer-brand">
-      <div class="rp-logo-pedestal rp-logo-pedestal-footer">
-        <img src="Logo with wording.jpeg" alt="RupeePeople" class="rp-logo rp-logo-footer" width="220" height="58" />
-      </div>
-      <p class="rp-footer-tagline">When you think about money</p>
-    </div>
-    <nav class="rp-footer-links">
-      <a href="index.html">Home</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <div class="rp-footer-divider" aria-hidden="true"></div>
-    <p class="rp-footer-meta">© 2026 RupeePeople — All Rights Reserved.</p>
+    <nav class="rp-footer-links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav>
+    <span>© 2026 RupeePeople — All Rights Reserved.</span>
   </footer>
 </body>
 </html>

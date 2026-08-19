@@ -13,70 +13,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="logo.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="Logo with wording.jpeg" />
-  <link rel="preload" as="image" href="Logo with wording.jpeg" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="rp-header" id="siteHeader">
-    <a href="#hero" class="rp-logo-brand">
-      <span class="rp-logo-pedestal rp-logo-pedestal-header">
-        <img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-logo-header" width="180" height="48" />
-      </span>
-      <span class="rp-logo-brand-text">
-        <span class="rp-tagline">When you think about money</span>
-      </span>
-    </a>
-    <nav class="rp-nav" id="siteNav" aria-label="Main navigation">
+  <header class="rp-header">
+    <div class="rp-logo-wrap">
+      <a href="#hero"><img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-logo-animate" /></a>
+      <span class="rp-tagline">When you think about money</span>
+    </div>
+    <nav class="rp-nav">
       <a href="#hero">Home</a>
       <a href="#services">Services</a>
       <a href="#app">Mobile App</a>
       <a href="#contact">Contact</a>
       <a href="privacy.html">Privacy</a>
     </nav>
-    <div class="rp-header-actions">
-      <a href="https://wa.me/918056221285" class="rp-header-cta">WhatsApp Us</a>
-      <button class="rp-nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-      <button class="rp-dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode">☾</button>
-    </div>
+    <button class="rp-dark-toggle" id="darkToggle" aria-label="Toggle dark mode">☾</button>
   </header>
 
   <section class="rp-hero" id="hero">
-    <div class="rp-hero-logo-watermark" aria-hidden="true"></div>
     <div class="rp-hero-inner">
-      <div class="rp-hero-logo rp-reveal">
-        <div class="rp-logo-pedestal rp-logo-pedestal-hero">
-          <img src="Logo with wording.jpeg" alt="RupeePeople — When you think about money" class="rp-logo rp-logo-hero" width="360" height="96" />
-        </div>
-        <p class="rp-hero-tagline">When you think about money</p>
-      </div>
-      <span class="rp-hero-eyebrow">India's Asset Discovery Service</span>
-      <h1>Discover &amp; Recover <em>Hidden Financial Assets</em> — Safely, Privately, Quickly</h1>
-      <p class="rp-hero-lead">For families dealing with death, medical emergencies, job loss, divorce, or inheritance disputes — RupeePeople finds money you didn't know existed.</p>
-      <ul class="rp-hero-stats">
-        <li>5 case types</li>
-        <li>Fixed fees from ₹999</li>
-        <li>DPDP Act compliant</li>
-      </ul>
+      <h1>Discover &amp; Recover Hidden Financial Assets — Safely, Privately, Quickly</h1>
+      <p>For families dealing with death, medical emergencies, job loss, divorce, or inheritance disputes — RupeePeople finds money you didn't know existed.</p>
       <div class="rp-hero-cta">
         <a href="https://wa.me/918056221285" class="rp-btn-primary">Start on WhatsApp</a>
-        <a href="#services" class="rp-btn-ghost">Explore Services</a>
+        <a href="#services" class="rp-btn-ghost">Learn More</a>
       </div>
       <p class="rp-consent-note">By contacting us, you acknowledge our <a href="privacy.html">Privacy Policy</a> and consent to processing for asset discovery purposes.</p>
     </div>
   </section>
 
-  <section class="rp-section rp-glass rp-reveal" id="services">
-    <div class="rp-section-head">
-      <span class="rp-section-eyebrow">What we do</span>
-      <h2>Asset Discovery Services</h2>
-      <p class="rp-section-intro">Bank accounts, PF, mutual funds, shares, IEPF, insurance, and more — with clear timelines and transparent fixed fees.</p>
-    </div>
+  <section class="rp-section rp-glass" id="services">
+    <h2>Our Asset Discovery Services</h2>
+    <p>We help you discover and recover bank accounts, PF, mutual funds, shares, IEPF, insurance, and more — with clear timelines and fixed fees.</p>
     <div class="rp-grid">
-      <article class="rp-card rp-reveal rp-reveal-delay-1">
-        <div class="rp-card-icon" aria-hidden="true">🕊</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">3–6 weeks</span>
         <h3>Post-Death Asset Discovery</h3>
         <p>Discover all financial assets of a deceased loved one.</p>
@@ -86,8 +58,7 @@
           <li>Mutual funds, shares &amp; IEPF</li>
         </ul>
       </article>
-      <article class="rp-card rp-reveal rp-reveal-delay-2">
-        <div class="rp-card-icon" aria-hidden="true">🏥</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">7–10 days</span>
         <h3>Medical Emergency</h3>
         <p>For families struggling with hospital bills.</p>
@@ -97,8 +68,7 @@
           <li>Accident &amp; credit card insurance</li>
         </ul>
       </article>
-      <article class="rp-card rp-reveal rp-reveal-delay-3">
-        <div class="rp-card-icon" aria-hidden="true">💼</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">5–7 days</span>
         <h3>Job Loss</h3>
         <p>Find money stuck with employers or forgotten investments.</p>
@@ -108,8 +78,7 @@
           <li>Reimbursements &amp; insurance</li>
         </ul>
       </article>
-      <article class="rp-card rp-reveal">
-        <div class="rp-card-icon" aria-hidden="true">⚖</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">2–4 weeks</span>
         <h3>Divorce / Legal</h3>
         <p>Confidential discovery of hidden or undisclosed assets.</p>
@@ -119,8 +88,7 @@
           <li>Evidence pack for your lawyer</li>
         </ul>
       </article>
-      <article class="rp-card rp-reveal rp-reveal-delay-1">
-        <div class="rp-card-icon" aria-hidden="true">👨‍👩‍👧</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">4–8 weeks</span>
         <h3>Inheritance Dispute</h3>
         <p>For families dealing with contested assets.</p>
@@ -130,8 +98,7 @@
           <li>Succession support</li>
         </ul>
       </article>
-      <article class="rp-card rp-reveal rp-reveal-delay-2">
-        <div class="rp-card-icon" aria-hidden="true">🏛</div>
+      <article class="rp-card rp-glass">
         <span class="rp-badge">All cases</span>
         <h3>Portal Coverage</h3>
         <p>Systematic searches across government and financial portals.</p>
@@ -145,110 +112,72 @@
     <p class="rp-pricing-note"><strong>Fixed fees from ₹999</strong> — no percentage cuts, no hidden charges. <a href="https://wa.me/918056221285">Contact us on WhatsApp</a> for a quote based on your case.</p>
   </section>
 
-  <section class="rp-trust-strip rp-glass rp-reveal">
+  <section class="rp-trust-strip rp-glass">
     <ul class="rp-trust-list">
       <li><strong>Private</strong>100% confidential — your data is never sold</li>
-      <li><strong>On-device</strong>SMS classified on your phone — no message text on our servers</li>
+      <li><strong>On-device</strong>SMS classified on your phone — no message text stored on our servers</li>
       <li><strong>Dual onboarding</strong>Start via WhatsApp or our mobile app</li>
       <li><strong>Transparent</strong>Fixed fees only — no percentage of recovered money</li>
     </ul>
   </section>
 
-  <aside class="rp-brand-recall rp-reveal" aria-label="RupeePeople brand">
-    <div class="rp-brand-recall-inner rp-glass">
-      <div class="rp-logo-pedestal">
-        <img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-brand-recall-logo" width="200" height="52" />
-      </div>
-      <p class="rp-brand-recall-tagline">When you think about money</p>
-      <p class="rp-brand-recall-sub">RupeePeople — India's trusted name for discovering hidden financial assets with clarity, care, and complete privacy.</p>
-    </div>
-  </aside>
-
-  <section class="rp-section rp-glass rp-app-highlight rp-reveal" id="app">
-    <div class="rp-section-head">
-      <span class="rp-badge rp-badge-gold">Coming Soon</span>
-      <span class="rp-section-eyebrow">Mobile-first discovery</span>
-      <h2>RupeePeople Mobile App</h2>
-      <p class="rp-section-intro">Take control of financial discovery on your phone — with privacy built in from day one.</p>
-    </div>
+  <section class="rp-section rp-glass rp-app-highlight" id="app">
+    <span class="rp-badge rp-badge-gold">Coming Soon</span>
+    <h2>RupeePeople Mobile App</h2>
+    <p>Take control of your financial discovery on your phone — with privacy built in from day one.</p>
     <div class="rp-grid rp-grid-2">
-      <article class="rp-card">
-        <div class="rp-card-icon" aria-hidden="true">📱</div>
+      <article class="rp-card rp-glass">
         <h3>Finance SMS &amp; Gmail Inbox</h3>
         <p>On-device filtering of finance-related messages. Free tier covers the last 6 months of history.</p>
       </article>
-      <article class="rp-card">
-        <div class="rp-card-icon" aria-hidden="true">🔐</div>
+      <article class="rp-card rp-glass">
         <h3>Secure Legacy Discovery</h3>
         <p>Guided 9-step survey for NRI and domestic cases — automatically opens a case with a unique request ID.</p>
       </article>
-      <article class="rp-card">
-        <div class="rp-card-icon" aria-hidden="true">📁</div>
+      <article class="rp-card rp-glass">
         <h3>Document Vault</h3>
         <p>Upload photos and PDFs with encrypted storage for your important financial documents.</p>
       </article>
-      <article class="rp-card">
-        <div class="rp-card-icon" aria-hidden="true">📄</div>
+      <article class="rp-card rp-glass">
         <h3>One-Click Family Audit</h3>
         <p>Export a PDF summary of discovered SMS, Gmail, and vault data for your family or lawyer.</p>
       </article>
     </div>
     <p class="rp-subsection-title">Privacy-first by design</p>
-    <p class="rp-section-intro">Financial SMS messages are classified on your device using on-device machine learning. Our servers receive only anonymous counts — never the content of your messages.</p>
-    <div class="rp-hero-cta">
-      <a href="https://wa.me/918056221285?text=Hi%2C%20I%27d%20like%20to%20join%20the%20RupeePeople%20app%20waitlist." class="rp-btn-gold">Join App Waitlist</a>
-      <a href="mailto:rupeepeople@gmail.com?subject=App%20Waitlist" class="rp-btn-ghost">Email Us</a>
+    <p>Financial SMS messages are classified on your device using on-device machine learning. Our servers receive only anonymous counts (message type and category) — never the content of your messages.</p>
+    <div class="rp-hero-cta" style="margin-top:1.5rem;">
+      <a href="https://wa.me/918056221285?text=Hi%2C%20I%27d%20like%20to%20join%20the%20RupeePeople%20app%20waitlist." class="rp-btn-gold">Join App Waitlist on WhatsApp</a>
+      <a href="mailto:rupeepeople@gmail.com?subject=App%20Waitlist" class="rp-btn-ghost">Email rupeepeople@gmail.com</a>
     </div>
   </section>
 
-  <section class="rp-section rp-contact rp-reveal" id="contact">
-    <div class="rp-section-head">
-      <span class="rp-section-eyebrow">Get in touch</span>
-      <h2>Contact RupeePeople</h2>
-      <p class="rp-section-intro">Reach us for asset discovery, case onboarding, or app waitlist enquiries.</p>
-    </div>
+  <section class="rp-section rp-contact" id="contact">
+    <h2>Contact RupeePeople</h2>
+    <p>Reach us for asset discovery, case onboarding, or app waitlist enquiries.</p>
     <div class="rp-contact-grid">
-      <a href="mailto:rupeepeople@gmail.com" class="rp-contact-item">
-        <span class="rp-contact-icon" aria-hidden="true">✉</span>
-        <span>rupeepeople@gmail.com</span>
-      </a>
-      <a href="tel:+918056221285" class="rp-contact-item">
-        <span class="rp-contact-icon" aria-hidden="true">📞</span>
-        <span>+91 80562 21285</span>
-      </a>
-      <a href="https://wa.me/918056221285" class="rp-contact-item">
-        <span class="rp-contact-icon" aria-hidden="true">💬</span>
-        <span>WhatsApp us</span>
-      </a>
+      <a href="mailto:rupeepeople@gmail.com" class="rp-contact-item">📧 rupeepeople@gmail.com</a>
+      <a href="tel:+918056221285" class="rp-contact-item">📞 +91 80562 21285</a>
+      <a href="https://wa.me/918056221285" class="rp-contact-item">💬 WhatsApp: +91 80562 21285</a>
     </div>
   </section>
 
-  <div class="rp-dpdp-notice rp-glass rp-reveal">
+  <button class="rp-whatsapp-fab" onclick="window.location.href='https://wa.me/918056221285'" aria-label="Chat on WhatsApp">💬</button>
+
+  <div class="rp-dpdp-notice rp-glass">
     <p>RupeePeople processes your personal data in accordance with India's <strong>Digital Personal Data Protection Act, 2023</strong>.
       <a href="privacy.html">Privacy Policy</a> ·
-      <a href="mailto:rupeepeople@gmail.com">Grievance Officer</a>
+      <a href="mailto:rupeepeople@gmail.com">Grievance Officer: rupeepeople@gmail.com</a>
     </p>
   </div>
 
-  <button class="rp-whatsapp-fab" type="button" onclick="window.location.href='https://wa.me/918056221285'" aria-label="Chat on WhatsApp">💬</button>
-
   <footer class="rp-footer">
-    <div class="rp-footer-brand">
-      <div class="rp-logo-pedestal rp-logo-pedestal-footer">
-        <img src="Logo with wording.jpeg" alt="RupeePeople" class="rp-logo rp-logo-footer" width="220" height="58" />
-      </div>
-      <p class="rp-footer-tagline">When you think about money</p>
-    </div>
     <nav class="rp-footer-links">
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms &amp; Conditions</a>
       <a href="rss.xml">RSS Updates</a>
     </nav>
-    <div class="rp-footer-divider" aria-hidden="true"></div>
-    <p class="rp-footer-meta">
-      rupeepeople@gmail.com · +91 80562 21285<br />
-      © 2026 RupeePeople — All Rights Reserved.
-    </p>
+    <span>rupeepeople@gmail.com · +91 80562 21285</span><br />
+    <span>© 2026 RupeePeople — All Rights Reserved.</span>
   </footer>
 </body>
 </html>
