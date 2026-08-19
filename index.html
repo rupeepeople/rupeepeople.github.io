@@ -13,15 +13,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="Logo with wording.jpeg" />
+  <link rel="preload" as="image" href="Logo with wording.jpeg" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="rp-header" id="siteHeader">
-    <div class="rp-logo-wrap">
-      <a href="#hero"><img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo" /></a>
-      <span class="rp-tagline">When you think about money</span>
-    </div>
+    <a href="#hero" class="rp-logo-brand">
+      <span class="rp-logo-pedestal rp-logo-pedestal-header">
+        <img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-logo-header" width="180" height="48" />
+      </span>
+      <span class="rp-logo-brand-text">
+        <span class="rp-tagline">When you think about money</span>
+      </span>
+    </a>
     <nav class="rp-nav" id="siteNav" aria-label="Main navigation">
       <a href="#hero">Home</a>
       <a href="#services">Services</a>
@@ -37,7 +44,14 @@
   </header>
 
   <section class="rp-hero" id="hero">
+    <div class="rp-hero-logo-watermark" aria-hidden="true"></div>
     <div class="rp-hero-inner">
+      <div class="rp-hero-logo rp-reveal">
+        <div class="rp-logo-pedestal rp-logo-pedestal-hero">
+          <img src="Logo with wording.jpeg" alt="RupeePeople — When you think about money" class="rp-logo rp-logo-hero" width="360" height="96" />
+        </div>
+        <p class="rp-hero-tagline">When you think about money</p>
+      </div>
       <span class="rp-hero-eyebrow">India's Asset Discovery Service</span>
       <h1>Discover &amp; Recover <em>Hidden Financial Assets</em> — Safely, Privately, Quickly</h1>
       <p class="rp-hero-lead">For families dealing with death, medical emergencies, job loss, divorce, or inheritance disputes — RupeePeople finds money you didn't know existed.</p>
@@ -140,6 +154,16 @@
     </ul>
   </section>
 
+  <aside class="rp-brand-recall rp-reveal" aria-label="RupeePeople brand">
+    <div class="rp-brand-recall-inner rp-glass">
+      <div class="rp-logo-pedestal">
+        <img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo rp-brand-recall-logo" width="200" height="52" />
+      </div>
+      <p class="rp-brand-recall-tagline">When you think about money</p>
+      <p class="rp-brand-recall-sub">RupeePeople — India's trusted name for discovering hidden financial assets with clarity, care, and complete privacy.</p>
+    </div>
+  </aside>
+
   <section class="rp-section rp-glass rp-app-highlight rp-reveal" id="app">
     <div class="rp-section-head">
       <span class="rp-badge rp-badge-gold">Coming Soon</span>
@@ -209,6 +233,12 @@
   <button class="rp-whatsapp-fab" type="button" onclick="window.location.href='https://wa.me/918056221285'" aria-label="Chat on WhatsApp">💬</button>
 
   <footer class="rp-footer">
+    <div class="rp-footer-brand">
+      <div class="rp-logo-pedestal rp-logo-pedestal-footer">
+        <img src="Logo with wording.jpeg" alt="RupeePeople" class="rp-logo rp-logo-footer" width="220" height="58" />
+      </div>
+      <p class="rp-footer-tagline">When you think about money</p>
+    </div>
     <nav class="rp-footer-links">
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms &amp; Conditions</a>

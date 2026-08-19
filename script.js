@@ -40,12 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
       siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
     }
     if (hero) {
-      const shift = Math.min(32, window.scrollY * 0.06);
+      const scrollY = window.scrollY;
+      const shift = Math.min(32, scrollY * 0.06);
       document.documentElement.style.setProperty("--hero-shift", `${shift}px`);
+      const heroLogo = document.querySelector(".rp-hero-logo");
+      if (heroLogo) {
+        heroLogo.style.transform = `translateY(${shift * 0.15}px)`;
+      }
     }
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
   onScroll();
 
   const revealEls = document.querySelectorAll(".rp-reveal");
