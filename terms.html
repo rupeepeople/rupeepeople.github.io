@@ -12,15 +12,19 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="rp-header">
+  <header class="rp-header" id="siteHeader">
     <div class="rp-logo-wrap">
       <a href="index.html"><img src="Logo with wording.jpeg" alt="RupeePeople logo" class="rp-logo" /></a>
+      <span class="rp-tagline">When you think about money</span>
     </div>
-    <nav class="rp-nav">
+    <nav class="rp-nav" id="siteNav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy</a>
     </nav>
-    <button class="rp-dark-toggle" id="darkToggle" aria-label="Toggle dark mode">☾</button>
+    <div class="rp-header-actions">
+      <button class="rp-nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="rp-dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode">☾</button>
+    </div>
   </header>
 
   <main class="rp-legal">
@@ -83,8 +87,12 @@
   </main>
 
   <footer class="rp-footer">
-    <nav class="rp-footer-links"><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav>
-    <span>© 2026 RupeePeople — All Rights Reserved.</span>
+    <nav class="rp-footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="rp-footer-divider" aria-hidden="true"></div>
+    <p class="rp-footer-meta">© 2026 RupeePeople — All Rights Reserved.</p>
   </footer>
 </body>
 </html>
