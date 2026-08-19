@@ -1,5 +1,6 @@
 🎨 RupeePeople — Brand Identity Guide
-Version 2.0 — Updated with Official Logo Colors
+Version 2.1 — August 2026  
+Updated with Logo Memorability Standard (logo + tagline pairing)
 
 🏛️ 1. Brand Essence
 Brand Purpose
@@ -134,6 +135,78 @@ Do not place on busy backgrounds
 
 Do not add shadows or outlines
 
+🏷️ 5.1 Official Tagline
+Primary tagline (always pair with the logo in customer-facing touchpoints):
+
+When you think about money
+
+Rules:
+- Always show the **full logo with wording** and the tagline **together** — never the logo alone on first-impression surfaces.
+- Tagline typography: Poppins SemiBold or Medium, letter-spacing 0.12em–0.22em, uppercase or title case as shown above.
+- Tagline color: RupeePeople Green `#1E5B4E` on beige/white backgrounds; Accent Gold `#F0C14B` on dark green footer or premium sections.
+- Do not replace the tagline with product headlines (e.g. “Discover hidden assets”) on brand lockup surfaces — those belong in body copy below the lockup.
+
+Product headline (secondary — for ads, hero text, app body):
+Discover & Recover Hidden Financial Assets — Safely, Privately, Quickly.
+
+🎯 5.2 Logo Memorability Standard
+Repetition builds recall. RupeePeople uses a **consistent logo + tagline lockup** everywhere clients and partners first see us.
+
+Mandatory lockup format:
+1. Logo with wording on Light Beige `#F5EFE6` pedestal (minimum clear space: 1× logo height).
+2. Tagline directly below or beside the logo: **When you think about money**.
+
+Do not apply shadows, outlines, or color changes to the logo image itself. Pedestals and containers may use subtle borders; shadows apply to the container only.
+
+📍 5.3 Brand Touchpoints — Logo + Tagline Checklist
+Every touchpoint below MUST use the official logo + tagline pairing unless a platform crop makes tagline impossible (then use logo on beige and tagline in the adjacent bio/description field).
+
+| Touchpoint | Requirement | Owner |
+|------------|-------------|--------|
+| **Website** (rupeepeople.com) | Hero logo lockup, header, mid-page brand recall, footer | Marketing / Founder |
+| **WhatsApp Business profile** | Profile photo: logo on beige square (1080×1080). Business description starts with tagline. | Operations |
+| **WhatsApp chat wallpaper** | Optional: very subtle beige background — no competing logos | Operations |
+| **Invoices & receipts** | Logo + tagline in header; beige or white header band | Finance / Ops |
+| **Android app splash screen** | Full logo on beige, tagline below, 2–3 second display | Product / Engineering |
+| **iOS app splash** (when live) | Same as Android | Product |
+| **Email signature** | Logo (small) + tagline on one line or stacked | All team |
+| **Google Drive case folders** | Folder cover or pinned README with logo + tagline | Case managers |
+| **Letterhead / PDF reports** | Evidence packs and client PDFs: header lockup on every page | Case managers |
+| **Social media avatars** | Logo on beige circle/square; tagline in bio text | Marketing |
+| **LinkedIn banner / cover** | Logo + tagline visible in safe zone | Marketing |
+| **Client onboarding forms** | Logo + tagline at top of PDF/form | Operations |
+| **Play Store / App Store listing** | Feature graphic includes logo + tagline | Product |
+
+Review cadence: Founder checks all touchpoints **quarterly** for consistency.
+
+📐 5.4 Touchpoint Specifications
+WhatsApp Business profile photo
+- Size: 640×640 minimum (export 1080×1080 PNG).
+- Logo with wording centered on `#F5EFE6` background.
+- No text other than the logo artwork (tagline lives in the business profile **About** / description).
+
+WhatsApp Business description (first line)
+When you think about money — RupeePeople helps families discover hidden financial assets safely and privately.
+
+Invoices & payment receipts
+- Header: logo + tagline left-aligned on beige band (`#F5EFE6`), full width or A4 margin.
+- Footer: rupeepeople@gmail.com · +91 80562 21285 · rupeepeople.com
+
+Android / iOS splash screen
+- Background: `#F5EFE6` (full screen) or soft green-to-beige gradient using brand tokens only.
+- Center: logo with wording (max 70% screen width).
+- Below logo: **When you think about money** — Poppins SemiBold, `#1E5B4E`, letter-spacing 0.18em.
+- Optional third line (smaller, Inter Regular, `#5c5c5c`): “Discover hidden financial assets” — not a substitute for the tagline.
+- Display duration: 2–3 seconds; no animation on the logo (no spin, bounce, or color shift).
+
+Email signature (team template)
+```
+[RupeePeople logo — small, on beige]
+When you think about money
+RupeePeople · Asset Discovery
+rupeepeople@gmail.com · +91 80562 21285
+```
+
 🖼️ 6. Visual Style
 Design Principles
 Clean
@@ -212,6 +285,10 @@ RupeePeople is India’s trusted asset discovery service — helping families fi
 Do
 Use green + black + beige consistently
 
+**Always pair logo + tagline “When you think about money” on first-impression surfaces**
+
+Use the same lockup on WhatsApp profile, invoices, app splash, and website
+
 Speak with empathy
 
 Keep text short
@@ -223,6 +300,8 @@ Use WhatsApp-first CTAs
 Highlight privacy
 
 Don’t
+Show the logo alone without the tagline on profile photos, splash screens, or invoice headers
+
 Use fear-based messaging
 
 Overpromise timelines
