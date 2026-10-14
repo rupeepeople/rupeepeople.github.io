@@ -190,7 +190,7 @@ When you think about money — RupeePeople helps families discover hidden financ
 
 Invoices & payment receipts
 - Header: logo + tagline left-aligned on beige band (`#F5EFE6`), full width or A4 margin.
-- Footer: rupeepeople@gmail.com · +91 80562 21285 · rupeepeople.com
+- Footer: info@rupeepeople.com · support@rupeepeople.com · +91 80562 21285 · rupeepeople.com
 
 Android / iOS splash screen
 - Background: `#F5EFE6` (full screen) or soft green-to-beige gradient using brand tokens only.
@@ -204,7 +204,7 @@ Email signature (team template)
 [RupeePeople logo — small, on beige]
 When you think about money
 RupeePeople · Asset Discovery
-rupeepeople@gmail.com · +91 80562 21285
+info@rupeepeople.com · support@rupeepeople.com · +91 80562 21285
 ```
 
 🖼️ 6. Visual Style
