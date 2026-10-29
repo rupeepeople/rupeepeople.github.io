@@ -7,7 +7,6 @@ function trackGAEvent(eventName, eventParams = {}) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: eventName, ...eventParams });
     }
-    // Debug logging for local verification
     if (
       window.location.hostname === "localhost" ||
       window.location.hostname === "127.0.0.1" ||
@@ -36,7 +35,7 @@ function initGA4EventTracking() {
       link.getAttribute("aria-label") ||
       "link";
 
-    // 1. WhatsApp Leads Tracking
+    // 1. WhatsApp Leads Tracking (Strict Ending-in-98 value: 998)
     if (trackType === "whatsapp" || href.includes("wa.me")) {
       trackGAEvent("generate_lead", {
         method: "whatsapp",
@@ -44,7 +43,7 @@ function initGA4EventTracking() {
         event_label: label,
         lead_location: trackLocation,
         link_url: href,
-        value: 999,
+        value: 998,
         currency: "INR",
       });
       trackGAEvent("whatsapp_lead_click", {
@@ -63,7 +62,7 @@ function initGA4EventTracking() {
         event_label: label,
         lead_location: trackLocation,
         link_url: href,
-        value: 999,
+        value: 998,
         currency: "INR",
       });
       trackGAEvent("intake_form_click", {
@@ -112,30 +111,94 @@ function initGA4EventTracking() {
   });
 }
 
+// --- Interactive Fixed-Fee vs. Broker Commission Savings Estimator ---
+function initFeeEstimator() {
+  const tierSelect = document.getElementById("estTierSelect");
+  const amountInput = document.getElementById("estAssetAmount");
+  const outAmountLbl = document.getElementById("outEstAssetLbl");
+  const outRpFee = document.getElementById("outEstRpFee");
+  const outBrokerFee = document.getElementById("outEstBrokerFee");
+  const outSavings = document.getElementById("outEstSavings");
+  const outPayLink = document.getElementById("outEstPayBtn");
+
+  if (!tierSelect || !amountInput) return;
+
+  const tiers = {
+    "998": {
+      fee: 998,
+      name: "Tier 1 · Discovery & Evidence Pack",
+      url: "https://rzp.io/rzp/ebihggYp",
+    },
+    "2498": {
+      fee: 2498,
+      name: "Tier 2 · Bank & EPFO Claim Dossier",
+      url: "https://rzp.io/rzp/unL0ZyZx",
+    },
+    "4998": {
+      fee: 4998,
+      name: "Tier 3 · IEPF & Share Reclamation",
+      url: "https://rzp.io/rzp/d5tkRCG",
+    },
+  };
+
+  const fmtINR = (n) => "₹" + Number(n).toLocaleString("en-IN");
+
+  const update = () => {
+    const t = tiers[tierSelect.value] || tiers["998"];
+    const assetVal = Number(amountInput.value) || 500000;
+    const brokerCut = Math.round(assetVal * 0.20); // Typical 20% agent cut
+    const saved = Math.max(0, brokerCut - t.fee);
+
+    if (outAmountLbl) outAmountLbl.textContent = fmtINR(assetVal);
+    if (outRpFee) outRpFee.textContent = `${fmtINR(t.fee)} (Fixed · 0% Cut)`;
+    if (outBrokerFee) outBrokerFee.textContent = `${fmtINR(brokerCut)} (at 20% commission)`;
+    if (outSavings) outSavings.textContent = fmtINR(saved);
+    if (outPayLink) {
+      outPayLink.href = t.url;
+      outPayLink.textContent = `💳 Select ${t.name} (${fmtINR(t.fee)})`;
+    }
+  };
+
+  tierSelect.addEventListener("change", update);
+  amountInput.addEventListener("input", update);
+  update();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize analytics click tracking
   initGA4EventTracking();
+  initFeeEstimator();
 
   const darkToggle = document.getElementById("darkToggle");
-  const hero = document.querySelector(".rp-hero");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.querySelector(".rp-nav");
+
+  // Restore saved theme preference
+  if (localStorage.getItem("rp-theme") === "dark") {
+    document.body.classList.add("dark");
+    if (darkToggle) darkToggle.textContent = "☀";
+  }
 
   if (darkToggle) {
     darkToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      darkToggle.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+      const isDark = document.body.classList.toggle("dark");
+      darkToggle.textContent = isDark ? "☀" : "☾";
+      localStorage.setItem("rp-theme", isDark ? "dark" : "light");
     });
   }
 
-  if (hero) {
-    const updateHeroParallax = () => {
-      const scrollY = window.scrollY;
-      const shift = Math.min(24, scrollY * 0.08);
-      document.documentElement.style.setProperty("--hero-shift", `${shift}px`);
-    };
-
-    window.addEventListener("scroll", updateHeroParallax, { passive: true });
-    window.addEventListener("resize", updateHeroParallax);
-    updateHeroParallax();
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menuToggle.textContent = isOpen ? "✕" : "☰ Menu";
+    });
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰ Menu";
+      });
+    });
   }
 
   if (!localStorage.getItem("rp-privacy-dismissed")) {
@@ -144,8 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-label", "Privacy notice");
     banner.innerHTML =
-      '<span>We process personal data under India\'s DPDP Act, 2023. <a href="privacy.html">Privacy Policy</a></span>' +
-      '<button type="button" id="rpPrivacyDismiss">Got it</button>';
+      '<span>We process personal data strictly under India\'s DPDP Act, 2023. <a href="privacy.html">Privacy Policy</a> · <a href="consent.html">Client Consent Form</a></span>' +
+      '<button type="button" id="rpPrivacyDismiss">Accept &amp; Close</button>';
     document.body.appendChild(banner);
     document.body.classList.add("has-privacy-banner");
     document.getElementById("rpPrivacyDismiss")?.addEventListener("click", () => {
@@ -155,4 +218,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
